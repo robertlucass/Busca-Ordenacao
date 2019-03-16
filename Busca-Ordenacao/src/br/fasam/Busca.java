@@ -14,6 +14,7 @@ public class Busca {
 		String palav = leia.nextLine();
 		leia.close();
 		palav = palav + " " + palav.length()+ " ";
+		@SuppressWarnings("unused")
 		String aquivoLeitura = "./arquivos/English.txt";
 		
 		try {
