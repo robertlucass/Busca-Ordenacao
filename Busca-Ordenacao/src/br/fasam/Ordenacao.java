@@ -2,8 +2,6 @@ package br.fasam;
 
 public class Ordenacao {
 
-	
-	
 	static int aux = 0;
 	static String auxp;
 	static int i=0;
@@ -22,7 +20,6 @@ public class Ordenacao {
 	
 	public static void SelectionSort() {
 		Separar();
-		
 		int i, j;
 		int min, temp;
 		String temp2;
@@ -49,10 +46,8 @@ public class Ordenacao {
 	
 	}
 
-	
 	public static void InsertionSort() {
 		Separar();
-		
 		long tempoinicio = System.currentTimeMillis();
 		
 		for(i = 0; i <numeros.length; i++) {
@@ -75,7 +70,6 @@ public class Ordenacao {
 	
 	public static void BubbleSort() {
 		Separar();
-		
 		long tempoinicio = System.currentTimeMillis();
 		
 		for(i = 0; i < qtdLinhas-1; i++) {
@@ -106,8 +100,6 @@ public class Ordenacao {
 		long tempofim = System.currentTimeMillis();
 		long tempototal = (tempofim - tempoinicio);
 		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
-		
-		
 	}
 	
 	private static void QuickSort(int vetor[], int inicio, int fim) {
@@ -151,6 +143,5 @@ public class Ordenacao {
 	}
 	public static int[] Numeros() {
 		return numeros;
-	}
-	
+	}	
 }
