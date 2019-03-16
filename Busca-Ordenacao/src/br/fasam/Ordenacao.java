@@ -18,6 +18,36 @@ public class Ordenacao {
 		}
 	}
 	
+/**********************************************************************/
+	
+/*=========================inicio Bubble Sort=========================*/	
+	public static void BubbleSort() {
+		Separar();
+		long tempoinicio = System.currentTimeMillis();
+		
+		for(i = 0; i < qtdLinhas-1; i++) {
+			for(int j = 0; j < qtdLinhas - 2; i++) {
+				if(numeros[j] > numeros[j + 1]) {
+					aux = numeros[j];
+					numeros[j] = numeros [j + 1];
+					numeros[j + 1] = aux;
+					auxp = palavras[j];
+					palavras[j] = palavras[j+1];
+					palavras[j+1] = auxp;
+				}
+			}
+		}
+		
+		long tempofim = System.currentTimeMillis();
+		long tempototal = (tempofim - tempoinicio);
+		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
+		
+	}
+/*=========================Final Bubble Sort==========================*/
+	
+/**********************************************************************/
+	
+/*========================Inicio Selection Sort=======================*/
 	public static void SelectionSort() {
 		Separar();
 		int i, j;
@@ -45,7 +75,37 @@ public class Ordenacao {
 		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
 	
 	}
-
+/*========================Final Selection Sort========================*/
+	
+/**********************************************************************/
+	
+/*=========================inicio Quick Sort==========================*/	
+	
+	public static void QuickSort() {
+		Separar();
+		
+		long tempoinicio = System.currentTimeMillis();
+		
+		QuickSort(numeros, 0, qtdLinhas);
+		long tempofim = System.currentTimeMillis();
+		long tempototal = (tempofim - tempoinicio);
+		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
+	}
+	
+	private static void QuickSort(int vetor[], int inicio, int fim) {
+		if(inicio < fim) {
+			int posicaoPivo = separar(vetor, inicio, fim);
+			QuickSort(vetor, inicio, posicaoPivo - 1);
+			QuickSort(vetor, posicaoPivo - 1, fim);
+		}
+		
+	}
+	
+/*=========================Final Bubble Sort==========================*/
+	
+/**********************************************************************/	
+	
+/*========================inicio Insertion Sort=======================*/
 	public static void InsertionSort() {
 		Separar();
 		long tempoinicio = System.currentTimeMillis();
@@ -67,49 +127,10 @@ public class Ordenacao {
 		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
 		
 	}
+/*========================Final Insertion Sort========================*/
 	
-	public static void BubbleSort() {
-		Separar();
-		long tempoinicio = System.currentTimeMillis();
-		
-		for(i = 0; i < qtdLinhas-1; i++) {
-			for(int j = 0; j < qtdLinhas - 2; i++) {
-				if(numeros[j] > numeros[j + 1]) {
-					aux = numeros[j];
-					numeros[j] = numeros [j + 1];
-					numeros[j + 1] = aux;
-					auxp = palavras[j];
-					palavras[j] = palavras[j+1];
-					palavras[j+1] = auxp;
-				}
-			}
-		}
-		
-		long tempofim = System.currentTimeMillis();
-		long tempototal = (tempofim - tempoinicio);
-		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
-		
-	}
-	
-	public static void QuickSort() {
-		Separar();
-		
-		long tempoinicio = System.currentTimeMillis();
-		
-		QuickSort(numeros, 0, qtdLinhas);
-		long tempofim = System.currentTimeMillis();
-		long tempototal = (tempofim - tempoinicio);
-		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
-	}
-	
-	private static void QuickSort(int vetor[], int inicio, int fim) {
-		if(inicio < fim) {
-			int posicaoPivo = separar(vetor, inicio, fim);
-			QuickSort(vetor, inicio, posicaoPivo - 1);
-			QuickSort(vetor, posicaoPivo - 1, fim);
-		}
-		
-	}
+/**********************************************************************/
+
 
 	private static int separar(int[] vetor, int inicio, int fim) {
 		int pivo = vetor[inicio];
