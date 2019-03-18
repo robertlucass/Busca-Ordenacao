@@ -9,6 +9,8 @@ import java.io.LineNumberReader;
 import java.io.PrintWriter;
 
 public class ArquivoHandler {
+	
+	//teste2
 
 	public static String nome;
 	static int i=0;

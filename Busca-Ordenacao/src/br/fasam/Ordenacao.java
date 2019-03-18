@@ -1,6 +1,8 @@
 package br.fasam;
 
 public class Ordenacao {
+	
+	//teste2
 
 	static int aux = 0;
 	static String auxp;
@@ -121,6 +123,7 @@ public class Ordenacao {
 				palavras[j] = b;
 			}
 		}
+		
 		
 		long tempofim = System.currentTimeMillis();
 		long tempototal = (tempofim - tempoinicio);
