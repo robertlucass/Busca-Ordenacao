@@ -13,8 +13,6 @@ public class ArquivoHandler {
 	public static String nome;
 	static int i=0;
 	
-	//teste;
-	
 	public static int quantidadeLinhas() {
 		
 		String arquivoLeitura = "./arquivos/English.txt";

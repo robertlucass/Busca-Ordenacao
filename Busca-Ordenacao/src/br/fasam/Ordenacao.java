@@ -1,8 +1,6 @@
 package br.fasam;
 
 public class Ordenacao {
-	
-	//teste;
 
 	static int aux = 0;
 	static String auxp;
