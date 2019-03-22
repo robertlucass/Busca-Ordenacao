@@ -165,12 +165,16 @@ public class Ordenacao {
 		vetor[f] = pivo;		
 		return f;
 	}
-	public static String[] Palavras() {
-		return palavras;
-	}
-	public static int[] Numeros() {
-		return numeros;
-	}	
+
+public static String[] Palavras() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+public static int[] Numeros() {
+	// TODO Auto-generated method stub
+	return null;
+}
 	
 	
 }
