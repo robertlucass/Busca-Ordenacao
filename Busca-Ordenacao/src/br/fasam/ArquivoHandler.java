@@ -16,8 +16,12 @@ public class ArquivoHandler {
 	
 	public static int quantidadeLinhas() {
 		
-		String arquivoLeitura = "./arquivos/English.txt";
-		LineNumberReader linhaLeitura = null;
+		String arquivoLeitura				 =    "./arquivos/Entrada.txt";
+		String arquivoLeitura_English 		 =    "./arquivos/Portuguese (Brazilian).txt";
+		String arquivoLeitura_Portugues 	 =    "./arquivos/English.txt";
+		String arquivoLeitura_Spanish 		 =    "./arquivos/Spanish.txt";
+		LineNumberReader linhaLeitura 		 =    null;
+		
 		try {
 			linhaLeitura = new LineNumberReader(new FileReader(arquivoLeitura));
 			
