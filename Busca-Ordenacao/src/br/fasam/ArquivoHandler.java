@@ -50,13 +50,16 @@ public class ArquivoHandler {
 		try {
 			FileReader arq = new FileReader(nome);
 			BufferedReader Lerarq = new BufferedReader(arq);
-			String linha;
+			String linha = Lerarq.readLine();
+			int tam = Integer.parseInt(linha);
+			String[] vt = new String[tam + 1];
 			
-			while(i<quantidadeLinhas()) {
+			while (linha != null) {
+				vt[i] = linha;
+				//System.out.println(linha);
 				linha = Lerarq.readLine();
-				lista[i] = linha;
 				i++;
-				
+
 			}
 			
 			arq.close();

@@ -15,7 +15,7 @@ public class Ordenacao {
 	public static void Separar() {
 		while (i< qtdLinhas) {
 			palavras[i]=vetor[i];
-			
+		
 			numeros[i] = vetor[i].length();
 		}
 	}
