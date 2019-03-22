@@ -7,8 +7,7 @@ import java.util.Scanner;
 
 public class Busca {
 	public static void main(String[] args) {
-	//teste;
-		//teste 2
+
 		String nome = null;
 		int i=0;
 		Scanner leia = new Scanner(System.in);

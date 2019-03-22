@@ -68,7 +68,7 @@ public class ArquivoHandler {
 		return lista;
 	}
 	
-	public static void Escrever() throws IOException{
+	public void Escrever() throws IOException{
 		int i = 0;
 		String Palavras[] = Ordenacao.Palavras();
 		int Numeros[] = Ordenacao.Numeros();

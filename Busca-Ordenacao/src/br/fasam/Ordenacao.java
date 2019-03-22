@@ -38,6 +38,7 @@ public class Ordenacao {
 					palavras[j+1] = auxp;
 				}
 			}
+			
 		}
 		
 		long tempofim = System.currentTimeMillis();
@@ -50,7 +51,7 @@ public class Ordenacao {
 /**********************************************************************/
 	
 /*========================Inicio Selection Sort=======================*/
-	public static void SelectionSort() {
+	public static void SelectionSort(String vetor[]) {
 		Separar();
 		int i, j;
 		int min, temp;
@@ -75,7 +76,7 @@ public class Ordenacao {
 		long tempofim = System.currentTimeMillis();
 		long tempototal = (tempofim - tempoinicio);
 		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
-	
+		
 	}
 /*========================Final Selection Sort========================*/
 	
@@ -83,7 +84,7 @@ public class Ordenacao {
 	
 /*=========================inicio Quick Sort==========================*/	
 	
-	public static void QuickSort() {
+	public void QuickSort() {
 		Separar();
 		
 		long tempoinicio = System.currentTimeMillis();
@@ -94,7 +95,7 @@ public class Ordenacao {
 		System.out.printf("Tempo gasto na ordenação: %d"+ tempototal);
 	}
 	
-	private static void QuickSort(int vetor[], int inicio, int fim) {
+	private void QuickSort(int vetor[], int inicio, int fim) {
 		if(inicio < fim) {
 			int posicaoPivo = separar(vetor, inicio, fim);
 			QuickSort(vetor, inicio, posicaoPivo - 1);
@@ -108,7 +109,7 @@ public class Ordenacao {
 /**********************************************************************/	
 	
 /*========================inicio Insertion Sort=======================*/
-	public static void InsertionSort() {
+	public void InsertionSort() {
 		Separar();
 		long tempoinicio = System.currentTimeMillis();
 		
@@ -135,7 +136,7 @@ public class Ordenacao {
 /**********************************************************************/
 
 
-	private static int separar(int[] vetor, int inicio, int fim) {
+	private int separar(int[] vetor, int inicio, int fim) {
 		int pivo = vetor[inicio];
 		int i = inicio + 1, f = fim;
 		
@@ -156,6 +157,8 @@ public class Ordenacao {
 				i++;
 				f--;
 			}
+			
+			return f ;
 		}
 		
 		vetor[inicio] = vetor[f];
@@ -168,4 +171,6 @@ public class Ordenacao {
 	public static int[] Numeros() {
 		return numeros;
 	}	
+	
+	
 }
