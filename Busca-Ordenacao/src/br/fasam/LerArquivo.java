@@ -13,9 +13,9 @@ public class LerArquivo {
 		if (dic.equalsIgnoreCase("ingles"))
 			path = "./arquivos/English";
 		else if (dic.equalsIgnoreCase("espanhol"))
-			path = "./arquivos/Espanish";
-		else
-			path = "./arquivos/Portugues";
+			path = "C:\\Users\\Casas Bahia\\Desktop\\idiomas";
+		else if(dic.equalsIgnoreCase("portugues"))
+			path = "C:\\Users\\Casas Bahia\\Desktop\\idiomas";
 
 		try {
 			FileReader arq = new FileReader(path); 
