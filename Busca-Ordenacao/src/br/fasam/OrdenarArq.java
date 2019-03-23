@@ -2,24 +2,26 @@ package br.fasam;
 
 public class OrdenarArq {
 
-	public static class Ordenacao {
 
-		public static String[] selectionSort(String vetor[]) {
-			for (int i = 0; i <= vetor.length - 2; i++) {
-				int min = i;
-				for (int j = i + 1; j <= vetor.length - 1; j++) {
-					if (vetor[j].length() < vetor[min].length()) {
-						min = j;
-					}
+	public static String[] selectionSort(String vetor[])
+	{
+		for (int i = 0; i <= vetor.length - 2 ; i++) {
+			int min = i;
+			for(int j = i + 1 ; j <= vetor.length - 1 ; j++)
+			{
+				if(vetor[j].length() < vetor[min].length())
+				{
+					min = j;
 				}
-
-				String t = vetor[min];
-				vetor[min] = vetor[i];
-				vetor[i] = t;
 			}
-
-			return vetor;
+			
+			String t = vetor[min];
+			vetor[min] = vetor[i];
+			vetor[i] = t;
 		}
+		
+		return vetor;
+	}
 
 		private static void merge(String arr[], int l, int m, int r) {
 			int n1 = m - l + 1;
@@ -74,4 +76,4 @@ public class OrdenarArq {
 
 	}
 
-}
+

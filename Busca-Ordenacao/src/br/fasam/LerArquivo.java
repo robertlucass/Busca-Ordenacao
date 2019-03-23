@@ -11,12 +11,12 @@ public class LerArquivo {
 		String path = "";
 
 		if (dic.equalsIgnoreCase("ingles"))
-			path = "./arquivos/English";
+			path = "./arqTXT/Ingles";
 		else if (dic.equalsIgnoreCase("espanhol"))
-			path = "C:\\Users\\Casas Bahia\\Desktop\\idiomas";
+			path = "./arqTXT/Spanish";
 		else if(dic.equalsIgnoreCase("portugues"))
-			path = "C:\\Users\\Casas Bahia\\Desktop\\idiomas";
-
+			path = "./arqTXT/Portugues";
+		
 		try {
 			FileReader arq = new FileReader(path); 
 			BufferedReader lerArq = new BufferedReader(arq);
@@ -41,7 +41,7 @@ public class LerArquivo {
 
 			return vetor;
 		} catch (IOException e) {
-			System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
+			System.err.printf("ERRO NA ABERTURA DO ARQUIVO: %s.\n", e.getMessage());
 		}
 
 		return null;
