@@ -115,22 +115,17 @@ public class OrdenarArq {
 		return v;
 
 	}
-	
-	public static String[] insertionSort(String[] array) 
-    {
-	for (int i = 1; i < array.length; i++) 
-           {
-		String a = array[i];
-		int j;
-		for (j = i - 1; j >= 0 && array[j].compareTo(a) > 0; j--)
-                   {
-			array[j + 1] = array[j];
-			array[j].compareTo(a);
+
+	public static String[] insertionSort(String[] array) {
+		for (int i = 1; i < array.length; i++) {
+			String a = array[i];
+			int j;
+			for (j = i - 1; j >= 0 && array[j].compareTo(a) > 0; j--) {
+				array[j + 1] = array[j];
+				array[j].compareTo(a);
+			}
 		}
+		return array;
 	}
-	return array;
-}
-	
-	
 
 }

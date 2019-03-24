@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class LerArquivo {
-	
+
 	public static String[] lerArquivo(String dic) {
 
 		String path = "";
@@ -13,16 +13,15 @@ public class LerArquivo {
 		if (dic.equalsIgnoreCase("ingles"))
 			path = "./TXT/Ingles";
 		else if (dic.equalsIgnoreCase("espanhol"))
-			path = "./TXT/Spanish";
-		else if(dic.equalsIgnoreCase("portugues"))
+			path = "./TXT/Espanhol";
+		else if (dic.equalsIgnoreCase("portugues"))
 			path = "./TXT/Portugues";
-		
+
 		try {
-			FileReader arq = new FileReader(path); 
+			FileReader arq = new FileReader(path);
 			BufferedReader lerArq = new BufferedReader(arq);
 
-			String linha = lerArq.readLine(); 
-			
+			String linha = lerArq.readLine();
 
 			String[] vetor = new String[Integer.parseInt(linha)];
 			int i = 0;
@@ -32,7 +31,7 @@ public class LerArquivo {
 					vetor[i] = linha;
 					i++;
 				}
-				
+
 				linha = lerArq.readLine();
 
 			}
