@@ -4,7 +4,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		String vetor[] = LerArquivo.lerArquivo("portugues");
+		String vetor[] = LerArquivo.lerArquivo("Ingles");
 
 		System.out.println(vetor.length);
 
