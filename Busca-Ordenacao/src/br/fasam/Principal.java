@@ -16,23 +16,19 @@ public class Principal {
 
 		System.out.println(vetorOrdenado.length);
 		System.out.println("Tempo para ordenar: " + tempo + " ms");
-		
-		
-		String palavra = "abacaxi/B" ;
-		BuscarArquivo.buscaBinaria(vetor, palavra );
-		
+
+		String palavra = "abacaxi/B";
+		BuscarArquivo.buscaBinaria(vetor, palavra);
+
 		int posDesordenada = BuscarArquivo.buscaBinaria(vetor, palavra);
 		int posOrdenada = BuscarArquivo.buscaBinaria(vetorOrdenado, palavra);
-		if(posDesordenada == -1)
-		{
+		if (posDesordenada == -1) {
 			System.out.println(palavra + "NÃO EXISTE");
-		}
-		else
-		{
+		} else {
 			System.out.println(palavra + "posição : " + posDesordenada + " no Vetor Desordenado");
 			System.out.println(palavra + "posição : " + posOrdenada + " no Vetor Ordenado.");
 		}
-		
+
 		System.out.println();
 	}
 
