@@ -11,11 +11,11 @@ public class LerArquivo {
 		String path = "";
 
 		if (dic.equalsIgnoreCase("ingles"))
-			path = "./arqTXT/Ingles";
+			path = "./TXT/Ingles";
 		else if (dic.equalsIgnoreCase("espanhol"))
-			path = "./arqTXT/Spanish";
+			path = "C:\\Users\\Casas Bahia\\Documents\\idiomas";
 		else if(dic.equalsIgnoreCase("portugues"))
-			path = "./arqTXT/Portugues";
+			path = "C:\\Users\\Casas Bahia\\Documents\\idiomas";
 		
 		try {
 			FileReader arq = new FileReader(path); 
