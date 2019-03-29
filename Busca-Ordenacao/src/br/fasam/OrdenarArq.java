@@ -66,7 +66,6 @@ public class OrdenarArq {
 			mergeSort(arr, m + 1, r);
 			merge(arr, l, m, r);
 		}
-
 		return arr;
 	}
 
