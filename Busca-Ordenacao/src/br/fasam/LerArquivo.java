@@ -14,22 +14,22 @@ public class LerArquivo {
 			path = "./txt/French.txt";
 		else if (txt.equalsIgnoreCase("italiano"))
 			path = "./txt/Italian.txt";
+		else if (txt.equalsIgnoreCase("portugues"))
+			path = "./txt/Portuguese (Brazilian).txt";
 		else if (txt.equalsIgnoreCase("russo"))
 			path = "./txt/Russian.txt";
+		else if (txt.equalsIgnoreCase("teste"))
+			path = "./txt/teste.txt";
 
 		try {
 			FileReader arq = new FileReader(path);
 			BufferedReader lerArq = new BufferedReader(arq);
 
 			String linha = lerArq.readLine();
-			int j = 0;
-			
-			String[] vetor = new String[Integer.parseInt(linha)];
+
+			String[] vetor = new String[Integer.parseInt(linha) - 1];
 			int i = 0;
-			
-			j = Integer.parseInt(linha) ;
-			
-			j = j  + 1;
+
 			while (linha != null) {
 
 				if (i < vetor.length) {
@@ -38,7 +38,7 @@ public class LerArquivo {
 					i++;
 				}
 
-				linha = lerArq.readLine() ;
+				linha = lerArq.readLine();
 
 			}
 

@@ -9,10 +9,11 @@ public class BuscarArquivo {
 		}
 		return -1;
 	}
+	
 
-/*	public static int buscaBinaria(String[] array, String palavra) {
+public static int buscaBinaria(String[] array, String palavra) {
 		int esq = 0;
-		int dir = array.length - 1;
+		int dir = array.length;
 		int valorMeio;
 		while (esq <= dir) {
 			valorMeio = esq + ((dir - esq) / 2);
@@ -25,7 +26,7 @@ public class BuscarArquivo {
 			}
 		}
 		return -1;
-	}boolean BuscaBin (int a[], int x )
-*/
+	}
+
 	
 }

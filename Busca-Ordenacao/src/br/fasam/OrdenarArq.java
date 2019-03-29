@@ -83,7 +83,7 @@ public class OrdenarArq {
 		return v;
 	}
 
-	public String[] quicksort(String v[], int direita, int esquerda) {
+	/*public static String[] quicksort(String v[], int direita, int esquerda) {
 		int esq = esquerda;
 		int dir = direita;
 		String pivo = v[(esq + dir) / 2];
@@ -113,15 +113,19 @@ public class OrdenarArq {
 		}
 		return v;
 
-	}
+	}*/
 
 	public static String[] insertionSort(String[] array) {
-		for (int i = 1; i < array.length; i++) {
+		
+		String [] p = array ;
+		int i , j ;
+		for ( i = 1; i < array.length; i++) {
 			String a = array[i];
-			int j;
-			for (j = i - 1; j >= 0 && array[j].compareTo(a) > 0; j--) {
-				array[j + 1] = array[j];
-				array[j].compareTo(a);
+			 j = i - 1;
+			while((j >= 0) && (a.length() <  p[j].length())) {
+				p[j+1] = p[j];
+				
+				j--;
 			}
 		}
 		return array;
