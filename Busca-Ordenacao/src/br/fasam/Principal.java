@@ -1,4 +1,4 @@
-package br.fasam;
+/*package br.fasam;
 
 import java.util.Scanner;
 
@@ -10,20 +10,20 @@ public class Principal {
 		int cod_ordenacao, codigo, x;
 		
 		double fim_nano, fim_milles, inicio_nano, inicio_milles;
-		String French[] 			=   LerArquivo.lerArquivo("Frances");
+		
+		do {
+			
+			String French[] 			=   LerArquivo.lerArquivo("Frances");
 			String Italian[] 			= 	LerArquivo.lerArquivo(".Italiano");
 			String Portugues[]			= 	LerArquivo.lerArquivo(".Portugues");
 			String Frutas[] 			=   LerArquivo.lerArquivo("Frutas");
 			String VetorEscolhido[] 	= 	{};
-		do {
-			
-			
 			
 			System.out.println("\n------- Escolha um dicionario -------"
 											 +"\n1 - Frances"
 											 +"\n2 - Italian"
 											 +"\n3 - Portugues"
-											 +"\n4 - Frutas");
+											 );
 			
 			x = extrair().nextInt();
 	
@@ -36,9 +36,7 @@ public class Principal {
 			else if (x == 3) {
 				VetorEscolhido = Portugues;
 			}
-			else if (x == 4) {
-				VetorEscolhido = Frutas;
-			} 
+			
 			if (x < 0 || x > 3) {
 				do {
 					System.out.println("***** Código errado, escolha o idiomas. *****"
@@ -66,11 +64,11 @@ public class Principal {
 	
 			do {						
 				System.out.println("---------------- Escolha o método de ordenação ----------------"
-														+ "\n1 - QuickSort"
-														+ "\n2 - MergeSort"
-														+ "\n3 - BubbleSort"
-														+ "\n4 - InsertionSort"
-														+ "\n5 - SelectionSort");
+														
+														+ "\n1 - MergeSort"
+														+ "\n2 - BubbleSort"
+														+ "\n3 - InsertionSort"
+														+ "\n4 - SelectionSort");
 				cod_ordenacao = extrair().nextInt();
 				inicio_nano = System.nanoTime();
 				inicio_milles = System.currentTimeMillis();
@@ -78,7 +76,7 @@ public class Principal {
 				/*if (cod_ordenacao == 1) {
 					System.out.println("AGUARDE!!!");
 					OrdenarArq.quicksort(VetorEscolhido, VetorEscolhido.length - 1, VetorEscolhido.length - 1);
-				} */
+				} 
 				if (cod_ordenacao == 1) {
 					System.out.println("AGUARDE!!!");
 					OrdenarArq.mergeSort(VetorEscolhido, 0, VetorEscolhido.length - 1);
@@ -114,7 +112,7 @@ public class Principal {
 			printArray(Frutas);
 				
 	
-			System.out.println(French.toString() + "\n");
+			//System.out.println(French.toString() + "\n");
 			
 			System.out.println("\nTempo em Nanosegundos: " + (fim_nano - inicio_nano));
 			System.out.println("\nTempo em Milissegundos: " + (fim_milles - inicio_milles));
@@ -132,7 +130,7 @@ public class Principal {
 			} else {
 				System.out.println(palavra + "posição : " + posDesordenada + " no Vetor Desordenado");
 				System.out.println(palavra + "posição : " + posOrdenada + " no Vetor Ordenado.");
-			}*/
+			}
 	
 
 			
@@ -162,18 +160,17 @@ private static Scanner extrair() {
 	return new Scanner(System.in);
 }
 
-static void printArray(String arr[]) { 
-        int n = arr.length; 
-        
-        for (int i=0; i<n; ++i) {
-            System.out.println(arr[i] + " /////// tamanho: " + arr[i].length()); 
-        System.out.println(); 
-    
-        }
-}
+static void printArray(String arr[]) 
+{ 
+    int n = arr.length; 
+    for (int i=0; i<n; ++i) 
+        System.out.println(arr[i] + " /////// tamanho: " + arr[i].length()); 
+    System.out.println(); 
+} 
 }
 
-/*package br.fasam;
+*/
+package br.fasam;
 
 public class Principal {
 
@@ -220,4 +217,4 @@ public class Principal {
     } 
 
 
-}*/
+}
